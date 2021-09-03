@@ -55,7 +55,7 @@ jobs:
         id: meta-back
         uses: docker/metadata-action@v3
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}-backend
+          images: ${{ env.REGISTRY }}/${{ env.BACK_IMAGE_NAME }}-backend
 
       - name: Build and push backend image
         uses: docker/build-push-action@v2
