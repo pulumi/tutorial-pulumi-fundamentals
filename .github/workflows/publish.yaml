@@ -29,6 +29,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ${{ env.REGISTRY }}/${{ env.FRONT_IMAGE_NAME }}
+          flavor: |
+            latest=true
 
       - name: Build and push frontend image
         uses: docker/build-push-action@v2
@@ -56,6 +58,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ${{ env.REGISTRY }}/${{ env.BACK_IMAGE_NAME }}
+          flavor: |
+            latest=true
 
       - name: Build and push backend image
         uses: docker/build-push-action@v2
