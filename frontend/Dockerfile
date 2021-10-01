@@ -7,7 +7,7 @@ COPY ./client/package*.json ./
 
 RUN npm install
 COPY ./client .
-RUN npm run build
+RUN npm build
 EXPOSE 3001
 
-CMD [ "npx", "serve", "-l", "3001", "build" ]
+CMD [ "npm", "start" ]
