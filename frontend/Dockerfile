@@ -10,4 +10,4 @@ COPY ./client .
 RUN npm build
 EXPOSE 3001
 
-CMD [ "npm", "start" ]
+CMD [ "npx", "serve", "-l", "3001", "build" 
