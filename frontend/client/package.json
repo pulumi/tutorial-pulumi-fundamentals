@@ -16,7 +16,7 @@
     "shortid": "^2.2.16"
   },
   "scripts": {
-    "start": "cross-env PORT=3001 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -37,10 +37,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "cross-env": "^7.0.2"
-  },
-  "description": "> It contains the react fronend for the application bootstrapped with Create React APP",
+  "description": "> It contains the react frontend for the application bootstrapped with Create React APP",
   "main": "/usr/src/app/public/src/index.js",
   "author": "",
   "license": "ISC"
