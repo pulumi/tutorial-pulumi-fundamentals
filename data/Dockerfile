@@ -3,9 +3,11 @@ FROM mongo:focal
 ENV MONGO_INITDB_DATABASE=cart
 
 COPY data.js /docker-entrypoint-initdb.d/mongo-init.js
+COPY docker-healthcheck.sh /usr/local/bin
 
-HEALTHCHECK --interval=5m --timeout=3s \
-  CMD echo 'db.runCommand("ping").ok' | mongo mongo:27017/test --quiet
+RUN chmod +x /usr/local/bin/docker-healthcheck.sh
+
+HEALTHCHECK CMD ["/usr/local/bin/docker-healthcheck.sh"]
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
