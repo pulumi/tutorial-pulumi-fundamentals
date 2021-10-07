@@ -1,7 +1,7 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const host = process.env.HTTP_PROXY;
-const protocol = process.env.PROTOCOL;
+const protocol = process.env.PROXY_PROTOCOL;
 
 module.exports = function(app) {
   app.use(
