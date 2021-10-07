@@ -12,9 +12,7 @@ productsColl = cartDb.products
 
 productsColl.insertMany([
     {
-        "_id": {
-            "_oid": "5f6d025008a1b6f0e5636bc3"
-        },
+        "_id": "5f6d025008a1b6f0e5636bc3",
         "status": 1,
         "teaType": 2,
         "category": "boba",
@@ -41,9 +39,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6d0ad908a1b6f0e5636bc4"
-        },
+        "_id": "5f6d0ad908a1b6f0e5636bc4",
         "status": 1,
         "teaType": 2,
         "category": "boba",
@@ -70,9 +66,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6d734f19ce90070b4837ce"
-        },
+        "_id": "5f6d734f19ce90070b4837ce",
         "status": 2,
         "teaType": 2,
         "category": "boba",
@@ -99,9 +93,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6d74c519ce90070b4837cf"
-        },
+        "_id": "5f6d74c519ce90070b4837cf",
         "status": 1,
         "teaType": 2,
         "category": "boba",
@@ -128,9 +120,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6d761c19ce90070b4837d0"
-        },
+        "_id": "5f6d761c19ce90070b4837d0",
         "status": 1,
         "teaType": 4,
         "category": "chill",
@@ -158,9 +148,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6e0a4340fdb952de7f9314"
-        },
+        "_id": "5f6e0a4340fdb952de7f9314",
         "status": 2,
         "teaType": 3,
         "category": "latte",
@@ -187,9 +175,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6e0b6440fdb952de7f9315"
-        },
+        "_id": "5f6e0b6440fdb952de7f9315",
         "status": 2,
         "teaType": 4,
         "category": "chill",
@@ -219,9 +205,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6e0c3040fdb952de7f9316"
-        },
+        "_id": "5f6e0c3040fdb952de7f9316",
         "status": 1,
         "teaType": 4,
         "category": "chill",
@@ -251,9 +235,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6e0d3840fdb952de7f9317"
-        },
+        "_id": "5f6e0d3840fdb952de7f9317",
         "status": 1,
         "teaType": 4,
         "category": "chill",
@@ -283,9 +265,7 @@ productsColl.insertMany([
         }
     },
     {
-        "_id": {
-            "_oid": "5f6e0e8940fdb952de7f9318"
-        },
+        "_id": "5f6e0e8940fdb952de7f9318",
         "status": 1,
         "teaType": 4,
         "category": "chill",
