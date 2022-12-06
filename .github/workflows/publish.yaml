@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Log into Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -32,11 +32,18 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.FRONT_IMAGE_NAME }}
           flavor: |
             latest=true
+            
+      - name: Set up QEMU
+        uses: docker/setup-quemu-action@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
       - name: Build and push frontend image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: ./frontend/
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta-front.outputs.tags }}
           labels: ${{ steps.meta-front.outputs.labels }}
@@ -46,10 +53,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Log into Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -61,11 +68,18 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.BACK_IMAGE_NAME }}
           flavor: |
             latest=true
+            
+      - name: Set up QEMU
+        uses: docker/setup-quemu-action@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
       - name: Build and push backend image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: ./backend/
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta-back.outputs.tags }}
           labels: ${{ steps.meta-back.outputs.labels }}
@@ -75,10 +89,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Log into Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -90,11 +104,18 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.DATABASE_IMAGE_NAME }}
           flavor: |
             latest=true
+            
+      - name: Set up QEMU
+        uses: docker/setup-quemu-action@v2
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
       - name: Build and push database image
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v3
         with:
           context: ./data/
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ steps.meta-data.outputs.tags }}
           labels: ${{ steps.meta-data.outputs.labels }}
