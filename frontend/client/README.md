@@ -1,6 +1,6 @@
 # Shopping Cart Client
 
-> It contains the react fronend for the application bootstrapped with Create React APP
+> It contains the react front end for the application bootstrapped with Create React APP
 
 ## Available Scripts
 
