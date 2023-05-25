@@ -9,7 +9,7 @@
 ## Prerequisites
 
 If you are running from the tutorials, all you need is Pulumi and Docker. See
-[the start of the Docker lab](../README.md#Prerequistes) for more information.
+[the start of the Docker lab](../README.md#Prerequisites) for more information.
 
 If you're running this app locally without the tutorial, you need the following tools:
 
