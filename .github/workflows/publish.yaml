@@ -1,10 +1,8 @@
 name: Publish to Docker Hub
-
 on:
   push:
     branches:
       - main
-
 env:
   REGISTRY: docker.io
   FRONT_IMAGE_NAME: ${{ github.repository }}-frontend
